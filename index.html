@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1-M11.5 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }     
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M11.5 - SCAMPER</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 2 'Code Squad' y saluda a los niños mientras muestras el equipo de Code Squad, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! Hoy tenemos una misión muy especial: ayudaremos a Leo, un artesano de San Mateo Atenco, a descubrir nuevas combinaciones para sus piezas de talabartería. ¿Listos para empezar con la ‘C’ de Combinar y ver qué podemos crear juntos?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile_scamper')">
+        <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+    </div>
+    <div id="baile_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños con estos pasos para aplicar SCAMPER al baile:
+                    <ul>
+                        <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                        <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                        <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                        <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                        <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                        <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                        <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                    </ul>
+                </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Síganme para que aprendamos a bailar al estilo SCAMPER. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es esta canción, para irnos ejercitando y que cada día sea más fácil.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento_problema')">
+        <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+        <div class="subtitle">Introduce el video de las artesanías con las que van a trabajar y explica el reto.</div>
+    </div>
+    <div id="planteamiento_problema" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 4 "Desafío de Innovación" e introduce la historia de Leo, el artesano de San Mateo Atenco que quiere explorar nuevas combinaciones en sus diseños de talabartería.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy tenemos una misión muy especial: ayudaremos a Leo, un artesano que crea piezas de talabartería, a descubrir nuevas combinaciones en sus diseños. ¿Listos para conocer su historia y ver cómo podemos ayudarlo?</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 5 "Leo el Talabartero" y al final has algunas preguntas para corroborar que haya quedado claro lo que quiere Leo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, genios. Antes de comenzar, veamos si podemos entender el desafío de Leo. <br>
+                                                       ¿En qué Pueblo de México creen que Leo hace su trabajo de talabartería? (Esperar respuestas). <br>
+                                                       ¡Correcto, en San Mateo Atenco! ¿De qué material están hechas sus piezas? (Esperar respuestas). <br>
+                                                       ¡Exacto, de cuero! Ahora, ¿qué creen que podemos combinar con el cuero para hacerlo especial? <br>
+                                                       ¿Y qué combinaciones podríamos probar en sus patrones para que cada pieza cuente algo único? <br>
+                                                       ¡Manos a la obra!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('introduccion_scamper')">
+        <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Explica cómo hacer preguntas de innovación con "Sustituir".</div>
+    </div>
+    <div id="introduccion_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 6 "C de Combinar" e introduce cómo se pueden juntar diferentes elementos para innovar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy seguiremos practicando la fórmula mágica que aplicamos la misión pasada. ¿Recuerdan qué significa la letra ‘C’ de SCAMPER? ¡Exacto! Combinar. ‘Combinar’ quiere decir juntar dos o más cosas para crear algo nuevo. ¿Qué tal si probamos combinando materiales o patrones para hacer los diseños de Leo aún más únicos? ¡Vamos a pensar en todas las cosas que podríamos juntar!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('metodologia_qtf')">
+        <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+    </div>
+    <div id="metodologia_qtf" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la DIAPOSITIVA 7 "Paso 1 Metodología QTF" y Presenta el estímulo para hacer preguntas</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Recuerdan de qué material están hechas las piezas de Leo, el artesano? ¡Exacto, de cuero! Hoy vamos a pensar en cómo podríamos combinar otras cosas en sus diseños para hacer algo especial. Usaremos una fórmula mágica para hacer preguntas y explorar diferentes ideas.</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 8 "Fórmula Preguntas" y explica cómo el CODE SQUAD cómo pueden hacerse preguntas para ayudar a Leo. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios, vamos a volver a utilizar nuestra fórmula mágica que nos ayudará a hacer combinaciones increíbles! Esta es la Fórmula de COMBINAR. Cada vez que queramos combinar algo, podemos hacernos esta pregunta:
+'¿Con qué [otra cosa] podríamos combinar [nuestra artesanía] para hacerla diferente?' Por ejemplo, ¿con qué material podríamos combinar el cuero del cinturón para darle una textura especial? ¿O qué diseños de otras artesanías podríamos COMBINAR con los cinturones para crear un diseño nuevo?"</td>
+            </tr>
+<!-- Paso 3 -->
+<tr>
+    <td><strong>PASO 3 (3 minutos):</strong> Reproduce la Diapositiva 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas iniciales de combinación. Si hay bloqueo, sugiere que piensen en diferentes materiales o patrones de otras artesanías. Anota sus preguntas en el pizarrón.</td>
+    <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, genios! Ahora usaremos la fórmula de Combinar para crear preguntas que nos ayuden a diseñar algo único para Leo. ¿Qué les parece combinar el cuero con algo suave o brillante? ¿O qué tal si combinamos los dibujos de otras artesanías para darle un significado especial? ¡Vamos a escribir todas nuestras ideas en el pizarrón para inspirarnos!</td>
+</tr>
+
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Reproduce la DIAPOSITIVA 10 "Mejorar preguntas" explica la manera en la que podemos mejorar las preguntas que ya hicimos. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Hicieron preguntas geniales, pero ahora, vamos a hacerlas más detalladas. Para eso, necesitamos entender la diferencia entre una pregunta general y una pregunta específica.
+Una pregunta general es cuando preguntamos algo muy amplio, como: '¿Con qué dibujos de otras artesanías podemos combinar los diseños del cinturón?', Pero una pregunta más específica sería: '¿Con qué dibujos de los textiles de Chiapas podemos combinar el cinturón de Leo?' ¡Veamos cómo podemos mejorar cada pregunta para que beto sea más genial!"</td>
+            </tr>
+            <!-- Paso 5 -->
+            <tr>
+                <td><strong>PASO 5 (3 minutos):</strong> Reproduce la DIAPOSITIVA 11 "Ejemplo Pregunta Específica" da un ejemplo de pregunta específica y facilita el proceso para que los niños tomen las preguntas que ya hicieron y las vayan haciendo específicas. Ve agotando las preguntas una a una y anota las nuevas preguntas de los genios en el pizarrón. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a revisar una de nuestras preguntas. Esta dice: '¿Con qué material podríamos combinar el cuero en el cinturón de Leo?' ¿Podemos hacerla más específica? ¿Qué tal si preguntamos: '¿Con qué material brillante podríamos combinar el cuero para resaltar los patrones?' ¡Vamos a mejorar cada pregunta para hacer nuestras ideas aún más únicas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('prototipado_esferas')">
+        <div class="title">🖍️ Actividad 6: Prototipado en Papel de Cinturón ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Aplica las preguntas formuladas en el diseño de la esfera.</div>
+    </div>
+    <div id="prototipado_esferas" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 12 "Innovando Talabartería" y explica que aplicaremos las preguntas para crear un nuevo diseño de Leo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios del CODE SQUAD, ahora vamos a poner en práctica nuestras ideas de combinación para diseñar algo nuevo en la talabartería de Leo. ¡Usemos toda nuestra creatividad y pongamos en papel las combinaciones que imaginamos!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 13 "Entregar Materiales"  y distribuye los materiales. Asegúrate de que todos los niños tengan papel y colores para dibujar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen sus materiales, genios. Con estos, vamos a crear nuestras propias piezas de talabartería combinando materiales, texturas y patrones. Puede ser un cinturón, una bolsa, una montura... lo que ustedes quieran ¡Manos a la obra!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la Diapositiva 14 "Diseñar Talabartería" y guía a los niños en el diseño paso a paso, usando las ideas de combinación que formularon.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a empezar el diseño con la primera combinación que propusieron: ¿qué materiales o patrones agregarán a sus diseños? Dibujen su idea y luego pasamos a la siguiente parte. ¡Recuerden, cada parte puede ser única y especial!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+        <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta la adición de tecnología al reto.</div>
+    </div>
+    <div id="presentacion_tecnologia" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 15 "Presentación de Tecnología" y explica cómo Flex Lighting puede integrarse en los diseños de talabartería. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Ahora que tenemos nuestras ideas de combinación, vamos a ver cómo una tecnología especial puede hacer que nuestras piezas de talabartería sean aún más únicas. Hoy veremos cómo usar Flex Lighting para iluminar detalles en los diseños de cuero. ¿Se imaginan ver los dubujos brillar en la oscuridad?</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Reproduce la Diapositiva 16 "Video de Flex Lighting" y al final facilita preguntas para verificar la comprensión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿No es asombroso, genios? Ahora que vimos cómo funciona Flex Lighting, repasemos algunos puntos importantes. ¿Recuerdan cómo podemos hacer que Flex Lighting se integre en los diseños de cuero? (Esperar respuestas). ¡Exacto, siguiendo los patrones o contornos del diseño!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Reproduce la Diapositiva 17 "Talabartería con Flex Lighting" y muestra ejemplos de diseños con iluminación.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Miren estos diseños de talabartería que utilizan Flex Lighting. ¿Ven cómo las luces siguen los patrones y le dan un toque especial? Podemos hacer lo mismo con nuestras ideas para Leo.</td>
+            </tr>
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la Diapositiva 18 "Integración de Tecnología" y guía a los niños para pensar cómo incorporar Flex Lighting en sus propios diseños.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, imaginen cómo quedarían sus diseños si integraran Flex Lighting. ¿Dónde les gustaría que brillara la luz? ¿En los bordes, en los patrones, o quizás en algún detalle específico? ¡Dejen volar su imaginación y piensen cómo esta tecnología podría hacer sus diseños aún más únicos!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_esferas')">
+        <div class="title">🎨 Actividad 8: Presentación de Diseños ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Organiza la presentación de las esferas en grupos de 3.</div>
+    </div>
+    <div id="presentacion_esferas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la Diapositiva 19 "Presentación de Diseños" y organiza a los niños en grupos de 3 para que presenten sus diseños de talabartería al equipo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, es momento de mostrar sus increíbles diseños de talabartería! Vamos a organizarnos en grupos de tres, y cada uno presentará su diseño. Expliquen cómo combinaron materiales, patrones o incluso tecnologías como Flex Lighting para hacer su pieza especial. ¡Escuchemos todas sus ideas!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 9 -->
+<div id="activity-9" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_historia')">
+        <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+    </div>
+    <div id="conclusion_historia" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 20 'Conclusión y Cierre', felicita al CODE SQUAD por su trabajo.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, hicieron un trabajo espectacular! Leo está muy agradecido y emocionado con todas las ideas de combinación que le dieron para sus diseños de talabartería. Gracias a ustedes, cada pieza será más especial y única que nunca. ¡Nos vemos en la próxima misión para seguir creando juntos!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+  
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
